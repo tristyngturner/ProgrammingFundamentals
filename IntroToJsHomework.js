@@ -17,25 +17,25 @@ function tipAmount (billAmount, serviceQuality) {
     var good;
     var fair;
     var poor;
-    if (serviceQuality = "good") {
+    if (serviceQuality === "good") {
     return billAmount * .20;
-    } else if (serviceQuality = "fair") {
+    } else if (serviceQuality === "fair") {
     return billAmount * .15;
-    } else if (serviceQuality = "poor") {
+    } else if (serviceQuality === "poor") {
     return billAmount * .10;
     }
 }
-console.log(tipAmount(100, "good"));
+console.log(tipAmount(100, "poor"));
 
 function totalAmount (billAmount, serviceQuality) {
     var good;
     var fair;
     var poor;
-    if (serviceQuality = "good") {
+    if (serviceQuality === "good") {
     return billAmount * .20 + billAmount;
-    } else if (serviceQuality = "fair") {
+    } else if (serviceQuality === "fair") {
     return billAmount * .15 + billAmount;
-    } else if (serviceQuality = "poor") {
+    } else if (serviceQuality === "poor") {
     return billAmount * .10 + billAmount;
     }
 }
@@ -45,11 +45,11 @@ function splitAmount (billAmount, serviceQuality, guests) {
     var good;
     var fair;
     var poor;
-    if (serviceQuality = "good") {
+    if (serviceQuality === "good") {
     return (billAmount * .20 + billAmount) / guests;
-    } else if (serviceQuality = "fair") {
+    } else if (serviceQuality === "fair") {
     return (billAmount * .15 + billAmount) / guests;
-    } else if (serviceQuality = "poor") {
+    } else if (serviceQuality === "poor") {
     return (billAmount * .10 + billAmount) / guests;
     }
 }
