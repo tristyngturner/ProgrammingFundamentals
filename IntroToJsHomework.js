@@ -39,7 +39,7 @@ function totalAmount (billAmount, serviceQuality) {
     return billAmount * .10 + billAmount;
     }
 }
-console.log(totalAmount(100, "good"))
+console.log(totalAmount(100, "poor"))
 
 function splitAmount (billAmount, serviceQuality, guests) {
     var good;
@@ -53,4 +53,4 @@ function splitAmount (billAmount, serviceQuality, guests) {
     return (billAmount * .10 + billAmount) / guests;
     }
 }
-console.log(splitAmount(100, "good", 5))
+console.log(splitAmount(100, "poor", 5))
