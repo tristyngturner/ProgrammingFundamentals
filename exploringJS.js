@@ -15,35 +15,6 @@
 // }
 // printNumbers2(arr);
 
-// var size = 5;
-// let i;
-// function printSquare(x) {
-//     var size = x;
-//     let i;
-//     for (i=0; i < size; i++) {
-//         console.log("*");
-//         }
-// }
-
-// printSquare("5");
-
-// function printSquare(x,y) {
-//     var numOfColumns = x;
-//     var numOfRows = y;
-//     for(let i = 1; i<=numOfColumns; i++) {
-//         console.log("*");
-//     } for(let j=1; j<=numOfRows; j++) {
-//         console.log("*");
-//     }
-// }
-// printSquare(5,5);
-// }
-// for (let i = 1; i<=2; i++) {
-//     for (let j = 1; j <=2; j++) {
-//         console.log("*")
-//     }
-// }
-
 var size = 5;
 let i;
 function printSquare() {
@@ -52,6 +23,7 @@ function printSquare() {
         }
 }
 printSquare();
+//above is the wrong way, more manual way, below is actual formal for printing
 
 function printSquare(size) {
     let grid = ''
@@ -64,4 +36,18 @@ function printSquare(size) {
     console.log(grid)
 }
 printSquare(5);
+
+function printBox(x,y) {
+    for (let i = 0; i < x; i++) {
+        for (let j = 0; j < y; j++) {
+            if (x == 1 || y == 1 || x == 6 || y == 4){
+                console.log("* ");
+            }else{
+                console.log("  ");
+            }
+        }
+        console.log('\n')
+    }
+}
+printBox(6,4)
 
