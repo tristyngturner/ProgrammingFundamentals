@@ -38,16 +38,17 @@ function printSquare(size) {
 printSquare(5);
 
 function printBox(x,y) {
-    for (let i = 0; i < x; i++) {
-        for (let j = 0; j < y; j++) {
-            if (x == 1 || y == 1 || x == 6 || y == 4){
-                console.log("* ");
+    let box = ''
+    for (let i = 1; i <= x; i++) {
+        for (let j = 1; j <= y; j++) {
+            if (i === 1 || i === x || j === 1 || j === y) {
+                box += "*"
             }else{
-                console.log("  ");
+                box += " "
             }
         }
-        console.log('\n')
+        box += "\n" 
     }
+    console.log(box)
 }
-printBox(6,4)
-
+printBox(6,10)
