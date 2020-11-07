@@ -37,18 +37,37 @@ function printSquare(size) {
 }
 printSquare(5);
 
-function printBox(x,y) {
-    let box = ''
-    for (let i = 1; i <= x; i++) {
-        for (let j = 1; j <= y; j++) {
-            if (i === 1 || i === x || j === 1 || j === y) {
-                box += "*"
+// function printBox(x,y) {
+//     let box = ''
+//     for (let i = 1; i <= x; i++) {
+//         for (let j = 1; j <= y; j++) {
+//             if (i === 1 || i === x || j === 1 || j === y) {
+//                 box += "*"
+//             }else{
+//                 box += " "
+//             }
+//         }
+//         box += "\n" 
+//     }
+//     console.log(box)
+// }
+// printBox(6,10)
+
+function printBanner(banner) {
+    let text = ''
+    for (let i = 1; i <= 3; i++) {
+        for (let j = 1; j <= banner.length + 2; j++) {
+            if (i === 1 || i === 3 || j === 1 || j === banner.length +2) {
+                text += "*"
             }else{
-                box += " "
+                text += banner[j - 2]
             }
         }
-        box += "\n" 
+        text += "\n" 
     }
-    console.log(box)
+    console.log(text)
+    
 }
-printBox(6,10)
+printBanner('JavaScript')
+let something = "Javascript";
+console.log(something, something.length, something[0]);
