@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <title>Tristyn's Madlib</title>
+  </head>
+  <body>
+    <div class="container-fluid h-100 heading align-items-center">
+      <h1 class="col-12">Tristyn's Madlib</h1>
+    </div>
+    <div class="container-fluid h-100 form">
+      <form>
+        <div>
+          <label for="holiday">Holiday</label>
+          <input type="text" name="holiday" id="holiday" />
+        </div>
+        <div>
+          <label for="faveFood">Favorite Food</label>
+          <input type="text" name="food" id="faveFood" />
+        </div>
+        <div>
+          <label for="badFood">Least Favorite Food</label>
+          <input type="text" name="food" id="badFood" />
+        </div>
+        <div>
+          <label for="adjective">Adjective</label>
+          <input type="text" name="adjective" id="adjective" />
+        </div>
+        <div>
+          <label for="family">Family Member</label>
+          <input type="text" name="family" id="family" />
+        </div>
+        <div>
+          <label for="faveGame">Favorite Game</label>
+          <input type="text" name="game" id="faveGame" />
+        </div>
+        <div>
+          <button type="submit" id="button" class="button">Submit</button>
+        </div>
+      </form>
+
+      <!-- <p>
+          Story:
+          <div id="story"></div>
+      </p> -->
+    </div>
+    <script>
+      var button = document.getElementById("button");
+      var form = document.getElementById("form");
+
+      button.addEventListener('click', function() {
+        let holiday = document.getElementById("holiday").value;
+        let faveFood = document.getElementById("faveFood").value;
+        let badFood = document.getElementById("badFood").value;
+        let adj = document.getElementById("adjective").value;
+        let fam = document.getElementById("family").value;
+        let game = document.getElementById("faveGame").value;
+      
+        event.preventDefault();
+      
+         alert("On " + holiday + " , we all wanted to eat " +
+            faveFood + " but our mom made " +
+            badFood + "! No stores or restaurants were open so we had to eat the " +
+            adj +   " food instead. After dinner, " +
+            fam +  " took a nap while we played " +  game +  ".")
+      });
+    </script>
+  </body>
+</html>
+<!-- 
+On *holiday*, we all wanted to eat *food but our family made *food! No stores or
+restaurants were open so we had to eat the *adjective food instead. After
+dinner, *family memeber* took a nap while we played *favorite game. -->
+
+<!-- madLib.innerText = form.append(madLib); -->
